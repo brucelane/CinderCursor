@@ -1,0 +1,7 @@
+{
+   "settings" : {
+      "apiUrl" : "https://api.sophiaantipolis.xyz/articles/",
+      "preferredAudioInput": "Realtek",
+      "preferredMidiInput": "nano"
+   }
+}

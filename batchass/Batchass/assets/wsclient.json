@@ -1,0 +1,22 @@
+{
+  "azclient": {
+    "host": "wss://sophiaantipolis.webpubsub.azure.com/client/hubs/Hub?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ3c3M6Ly9zb3BoaWFhbnRpcG9saXMud2VicHVic3ViLmF6dXJlLmNvbS9jbGllbnQvaHVicy9IdWIiLCJpYXQiOjE2ODE1NzgzMDksImV4cCI6MTY4MTU4MTkwOX0.hKF5RETS02N1-tPYvc17SrlqnyfhgxAYVZ2W6OYpGbo",
+    "port": 443
+  },
+  "clientchaispas": {
+    "host": "88.125.98.122",
+    "port": 40088
+  },
+  "clientdell": {
+    "host": "192.168.1.143",
+    "port": 40088
+  },
+  "client": {
+    "host": "127.0.0.1",
+    "port": 40088
+  },
+  "clt": {
+    "host": "blockchainyourart.io",
+    "port": 8091
+  }
+}
