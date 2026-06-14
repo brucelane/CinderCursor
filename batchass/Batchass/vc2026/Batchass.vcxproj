@@ -1,0 +1,248 @@
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{01F4D664-51B3-4A2E-84BA-9CFBD0C4EC69}</ProjectGuid>
+    <RootNamespace>Batchass</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>include_fix;..\include;..\..\..\Cinder-new\include;..\..\..\Cinder-new\blocks\Cinder-HTTP\src;..\..\..\Cinder-new\blocks\Cinder-HTTP\lib\include;..\..\..\Cinder-new\blocks\Cinder-ImGui\lib\imgui;..\..\..\Cinder-new\blocks\Cinder-ImGui\include;..\..\..\Cinder-new\blocks\Cinder-MIDI2\include;..\..\..\Cinder-new\blocks\Cinder-MIDI2\lib;..\..\..\Cinder-new\blocks\Cinder-MIDI2\src;..\blocks\Spout\include;..\..\..\Cinder-new\blocks\Cinder-VDR\include;..\..\..\Cinder-new\blocks\Cinder-VDR\src;..\..\..\Cinder-new\blocks\Cinder-VDRUI\include;..\..\..\Cinder-new\blocks\Cinder-VDRUI\src;..\..\..\Cinder-new\blocks\Cinder-Warping\include;..\..\..\Cinder-new\blocks\Cinder-WebSocketPP\src;..\..\..\Cinder-new\blocks\OSC\src</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;__WINDOWS_MM__;WIN32;_WIN32_WINNT=0x0601;_WINDOWS;NOMINMAX;_WEBSOCKETPP_CPP11_TYPE_TRAITS_;_WEBSOCKETPP_CPP11_INTERNAL_;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ForcedIncludeFiles>cinder/JsonTree.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>"..\..\..\Cinder-new\include";..\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cinder.lib;OpenGL32.lib;%(AdditionalDependencies);..\..\..\Cinder-new\blocks\Cinder-HTTP\lib\msw\Debug\libeay32MT.lib;..\..\..\Cinder-new\blocks\Cinder-HTTP\lib\msw\Debug\ssleay32MT.lib;winmm.lib;..\blocks\Spout\lib\Spout_static_d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>"..\..\..\Cinder-new\lib\msw\$(PlatformTarget)";"..\..\..\Cinder-new\lib\msw\$(PlatformTarget)\$(Configuration)\$(PlatformToolset)";..\..\..\Cinder-new\blocks\Cinder-WebSocketPP\lib\msw</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <IgnoreSpecificDefaultLibraries>LIBCMT;LIBCPMT</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include_fix;..\include;..\..\..\Cinder-new\include;..\..\..\Cinder-new\blocks\Cinder-HTTP\src;..\..\..\Cinder-new\blocks\Cinder-HTTP\lib\include;..\..\..\Cinder-new\blocks\Cinder-ImGui\lib\imgui;..\..\..\Cinder-new\blocks\Cinder-ImGui\include;..\..\..\Cinder-new\blocks\Cinder-MIDI2\include;..\..\..\Cinder-new\blocks\Cinder-MIDI2\lib;..\..\..\Cinder-new\blocks\Cinder-MIDI2\src;..\blocks\Spout\include;..\..\..\Cinder-new\blocks\Cinder-VDR\include;..\..\..\Cinder-new\blocks\Cinder-VDR\src;..\..\..\Cinder-new\blocks\Cinder-VDRUI\include;..\..\..\Cinder-new\blocks\Cinder-VDRUI\src;..\..\..\Cinder-new\blocks\Cinder-Warping\include;..\..\..\Cinder-new\blocks\Cinder-WebSocketPP\src;..\..\..\Cinder-new\blocks\OSC\src</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;__WINDOWS_MM__;WIN32;_WIN32_WINNT=0x0601;_WINDOWS;NOMINMAX;_WEBSOCKETPP_CPP11_TYPE_TRAITS_;_WEBSOCKETPP_CPP11_INTERNAL_;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ForcedIncludeFiles>cinder/JsonTree.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>"..\..\..\Cinder-new\include";..\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cinder.lib;OpenGL32.lib;%(AdditionalDependencies);..\..\..\Cinder-new\blocks\Cinder-HTTP\lib\msw\Release\libeay32MT.lib;..\..\..\Cinder-new\blocks\Cinder-HTTP\lib\msw\Release\ssleay32MT.lib;winmm.lib;..\blocks\Spout\lib\Spout_static.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>"..\..\..\Cinder-new\lib\msw\$(PlatformTarget)";"..\..\..\Cinder-new\lib\msw\$(PlatformTarget)\$(Configuration)\$(PlatformToolset)";..\..\..\Cinder-new\blocks\Cinder-WebSocketPP\lib\msw</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding />
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\assets\audio.json" />
+    <None Include="..\assets\fx.glsl" />
+    <None Include="..\assets\midi.json" />
+    <None Include="..\assets\mix.json" />
+    <None Include="..\assets\mixette.glsl" />
+    <None Include="..\assets\oscreceiver.json" />
+    <None Include="..\assets\post.glsl" />
+    <None Include="..\assets\shadertoy.vd" />
+    <None Include="..\assets\video_texture.fs.glsl" />
+    <None Include="..\assets\video_texture.vs.glsl" />
+    <None Include="..\assets\wsclient.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="x64\Debug\VDBatchass.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-HTTP\src\cinder\http\connector.hpp" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-HTTP\src\cinder\http\error_codes.hpp" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-HTTP\src\cinder\http\handshaker.hpp" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-HTTP\src\cinder\http\headers.hpp" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-HTTP\src\cinder\http\http.hpp" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-HTTP\src\cinder\http\parsers.hpp" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-HTTP\src\cinder\http\request_response.hpp" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-HTTP\src\cinder\http\requester.hpp" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-HTTP\src\cinder\http\responder.hpp" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-HTTP\src\cinder\http\url.hpp" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-ImGui\include\CinderImGui.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-ImGui\include\imgui_user.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-ImGui\include\imgui_user.inl" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-ImGui\lib\imgui\imconfig.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-ImGui\lib\imgui\imgui.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-ImGui\lib\imgui\imgui_internal.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-MIDI2\include\MidiConstants.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-MIDI2\include\MidiExceptions.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-MIDI2\include\MidiHeaders.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-MIDI2\include\MidiHub.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-MIDI2\include\MidiIn.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-MIDI2\include\MidiMessage.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-MIDI2\include\MidiOut.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-MIDI2\lib\RtMidi.h" />
+    <ClInclude Include="..\blocks\Spout\include\CiSpoutIn.h" />
+    <ClInclude Include="..\blocks\Spout\include\CiSpoutOut.h" />
+    <ClInclude Include="..\blocks\Spout\include\Spout.h" />
+    <ClInclude Include="..\blocks\Spout\include\SpoutCommon.h" />
+    <ClInclude Include="..\blocks\Spout\include\SpoutCopy.h" />
+    <ClInclude Include="..\blocks\Spout\include\SpoutDirectX.h" />
+    <ClInclude Include="..\blocks\Spout\include\SpoutGLDXinterop.h" />
+    <ClInclude Include="..\blocks\Spout\include\SpoutGLextensions.h" />
+    <ClInclude Include="..\blocks\Spout\include\SpoutMemoryShare.h" />
+    <ClInclude Include="..\blocks\Spout\include\SpoutReceiver.h" />
+    <ClInclude Include="..\blocks\Spout\include\SpoutSDK.h" />
+    <ClInclude Include="..\blocks\Spout\include\SpoutSender.h" />
+    <ClInclude Include="..\blocks\Spout\include\SpoutSenderNames.h" />
+    <ClInclude Include="..\blocks\Spout\include\SpoutSharedMemory.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDAnimation.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDFboShader.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDJsonManager.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDKeyboard.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDLog.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDMediator.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDMidi.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDMix.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDOscObserver.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDOscReceiver.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDParams.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDSession.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDSessionFacade.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDSettings.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDTypes.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDUIObserver.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDUIParams.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDUniforms.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDR\include\VDWebsocket.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDRUI\include\VDUI.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDRUI\include\VDUIAnimation.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDRUI\include\VDUIFbos.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDRUI\include\VDUITextures.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-VDRUI\include\VDUIWarps.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-Warping\include\Warp.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-WebSocketPP\src\WebSocketClient.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-WebSocketPP\src\WebSocketConnection.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\Cinder-WebSocketPP\src\WebSocketServer.h" />
+    <ClInclude Include="..\..\..\Cinder-new\blocks\OSC\src\cinder\osc\Osc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Cinder-new\src\cinder\JsonTree.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\src\jsoncpp\jsoncpp.cpp" />
+    <ClCompile Include="..\src\BatchassApp.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-ImGui\src\CinderImGui.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-ImGui\lib\imgui\imgui.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-ImGui\lib\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-ImGui\lib\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-MIDI2\src\MidiHub.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-MIDI2\src\MidiIn.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-MIDI2\src\MidiMessage.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-MIDI2\src\MidiOut.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-MIDI2\lib\RtMidi.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDAnimation.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDFboShader.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDJsonManager.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDKeyboard.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDLog.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDMediator.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDMidi.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDMix.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDOscReceiver.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDParams.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDSession.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDSessionFacade.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDSettings.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDUniforms.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDR\src\VDWebsocket.cpp" />
+    <ClCompile Include="include_fix\VDUI.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDRUI\src\VDUIAnimation.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDRUI\src\VDUIFbos.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDRUI\src\VDUITextures.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-VDRUI\src\VDUIWarps.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-Warping\src\Warp.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-Warping\src\WarpBilinear.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-Warping\src\WarpPerspective.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-Warping\src\WarpPerspectiveBilinear.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-WebSocketPP\src\WebSocketClient.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-WebSocketPP\src\WebSocketConnection.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\Cinder-WebSocketPP\src\WebSocketServer.cpp" />
+    <ClCompile Include="..\..\..\Cinder-new\blocks\OSC\src\cinder\osc\Osc.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

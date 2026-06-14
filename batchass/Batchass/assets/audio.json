@@ -1,0 +1,10 @@
+{
+   "audioinputs" : {
+      "{0.0.1.00000000}.{7a9e15a8-7b18-4246-98d0-0dd405c3587a}" : "Réseau de microphones (Realtek(R) Audio)",
+      "{0.0.1.00000000}.{cdc0ba73-cf64-46d1-83f0-c17b0139e2c7}" : "Line (3- AG06/AG03)"
+   },
+   "audiooutputs" : {
+      "{0.0.0.00000000}.{21028002-024f-4988-b366-21c461adf1da}" : "Line (3- AG06/AG03)",
+      "{0.0.0.00000000}.{aebd9855-7b2d-459f-96b0-0ba7c569e2d4}" : "Haut-parleurs (Realtek(R) Audio)"
+   }
+}
